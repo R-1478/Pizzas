@@ -26,6 +26,7 @@ class Pizza(db.Model):
     ingredients = db.Column(db.String(255))
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime)
+    
 
     @validates('price')
     def validate(self,value):
