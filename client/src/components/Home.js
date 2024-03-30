@@ -5,13 +5,13 @@ function Home() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    fetch("/restaurants")
+    fetch("https://pizza-be-8psk.onrender.com/restaurants")
       .then((r) => r.json())
       .then(setRestaurants);
   }, []);
 
   function handleDelete(id) {
-    fetch(`/restaurants/${id}`, {
+    fetch(`https://pizza-be-8psk.onrender.com/restaurants/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

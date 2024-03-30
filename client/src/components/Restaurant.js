@@ -11,7 +11,7 @@ function Home() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`/restaurants/${id}`).then((r) => {
+    fetch(`https://pizza-be-8psk.onrender.com/restaurants/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((restaurant) =>
           setRestaurant({ data: restaurant, error: null, status: "resolved" })

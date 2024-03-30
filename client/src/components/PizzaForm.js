@@ -19,7 +19,7 @@ function PizzaForm({ restaurantId, onAddPizza }) {
       restaurant_id: restaurantId,
       price: parseInt(price),
     };
-    fetch("/Restaurant_pizzas", {
+    fetch("https://pizza-be-8psk.onrender.com/Restaurant_pizzas", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
